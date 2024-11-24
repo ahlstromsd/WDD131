@@ -11,6 +11,16 @@
     --text-color: var(--text-dark);
 }
 
+[data-theme="light"] {
+    --background-color: var(--background-light);
+    --text-color: var(--text-dark);
+}
+
+[data-theme="dark"] {
+    --background-color: var(--background-dark);
+    --text-color: var(--text-light);
+}
+
 body {
     font-family: var(--primary-font);
     margin: 0;

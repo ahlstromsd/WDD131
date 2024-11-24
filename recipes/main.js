@@ -89,3 +89,26 @@ document.addEventListener("DOMContentLoaded", () => {
     // Run the initial random recipe display
     init();
 });
+// Theme switcher logic
+document.addEventListener("DOMContentLoaded", () => {
+    const themeSwitcher = document.getElementById("theme-switcher");
+    const rootElement = document.documentElement; // Get the root element
+
+    // Check for saved theme in localStorage
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+        rootElement.setAttribute("data-theme", savedTheme);
+        themeSwitcher.textContent = savedTheme === "dark" ? "Light Mode" : "Dark Mode";
+    }
+
+    // Add event listener for the theme switcher button
+    themeSwitcher.addEventListener("click", () => {
+        const currentTheme = rootElement.getAttribute("data-theme") || "light";
+        const newTheme = currentTheme === "light" ? "dark" : "light";
+
+        // Update the theme
+        rootElement.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme); // Save theme to localStorage
+        themeSwitcher.textContent = newTheme === "dark" ? "Light Mode" : "Dark Mode";
+    });
+});
