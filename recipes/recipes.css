@@ -7,14 +7,17 @@
     --text-light: #ebebeb;
     --primary-font: Arial, Helvetica, sans-serif;
     --secondary-font: "Amatic SC";
+    --background-color: var(--text-light);
+    --text-color: var(--text-dark);
 }
 
 body {
     font-family: var(--primary-font);
     margin: 0;
     padding: 0;
-    background-color: var(--text-light);
-    color: var(--text-dark);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 header {
@@ -33,6 +36,23 @@ header img {
 header h1 {
     font-family: var(--secondary-font);
     font-size: 2em;
+}
+
+.theme-switcher {
+    margin-left: auto;
+    cursor: pointer;
+    background-color: white;
+    color: var(--primary-color);
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.theme-switcher:hover {
+    background-color: var(--secondary-color);
+    color: white;
 }
 
 main {
@@ -76,7 +96,7 @@ form button {
     padding: 1em;
     max-width: 300px;
     text-align: center;
-    box-shadow: 0 4ox 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
 }
 
@@ -101,7 +121,7 @@ form button {
 }
 
 .rating {
-    color:#333;
+    color: var(--text-color);
     font-size: 1rem;
 }
 
@@ -133,4 +153,10 @@ footer {
 
 .social img {
     max-height: 40px;
+}
+
+/* Dark Theme */
+body.dark-theme {
+    --background-color: #333;
+    --text-color: #ebebeb;
 }
