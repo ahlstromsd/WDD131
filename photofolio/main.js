@@ -1,24 +1,28 @@
 let slideIndex = 1;
+let autoPlayInterval;
+
 showSlides(slideIndex);
+startAutoPlay();
 
 // Next/previous controls
 function plusSlides(n) {
-  clearInterval(autoScroll); // Stop auto-scroll when manually navigating
+  clearInterval(autoPlayInterval); // Stop autoplay
   showSlides(slideIndex += n);
-  autoScroll = setInterval(() => plusSlides(1), 5000); // Restart auto-scroll
+  startAutoPlay(); // Resume autoplay after the change
 }
 
 // Thumbnail image controls
 function currentSlide(n) {
-  clearInterval(autoScroll);
+  clearInterval(autoPlayInterval); // Stop autoplay
   showSlides(slideIndex = n);
-  autoScroll = setInterval(() => plusSlides(1), 5000);
+  startAutoPlay(); // Resume autoplay after the change
 }
 
+// Show the current slide
 function showSlides(n) {
   let i;
-  const slides = document.getElementsByClassName("mySlides");
-  const dots = document.getElementsByClassName("dot");
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
   if (n > slides.length) { slideIndex = 1; }
   if (n < 1) { slideIndex = slides.length; }
   for (i = 0; i < slides.length; i++) {
@@ -31,5 +35,9 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " active";
 }
 
-// Auto-scroll every 5 seconds
-let autoScroll = setInterval(() => plusSlides(1), 5000);
+// Autoplay functionality
+function startAutoPlay() {
+  autoPlayInterval = setInterval(() => {
+    showSlides(slideIndex += 1);
+  }, 7000); // Change slides every 7 seconds
+}

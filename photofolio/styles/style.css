@@ -43,10 +43,12 @@ main {
   
 /* Slideshow container */
 .slideshow-container {
-    width: 100%; /* Full width */
+    width: 90%; /* Full width */
+    height: 90%;
     position: relative;
     margin: auto;
     box-shadow: 5px 5px 10px black;
+    overflow: hidden;
 }
   
 /* Hide the images by default */
@@ -57,7 +59,8 @@ main {
 /* Images should stretch to fill the width */
 .mySlides img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
 }
   
 /* Next & previous buttons */
@@ -70,7 +73,7 @@ main {
     padding: 16px;
     color: white;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 30px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
@@ -79,6 +82,10 @@ main {
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
+}
+.prev {
+    left: 0; /* Align prev button to the left */
+    border-radius: 0 3px 3px 0;
 }
   
 .prev:hover, .next:hover {
@@ -94,6 +101,7 @@ main {
     bottom: 8px;
     width: 100%;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
 }
   
 /* Number text */
