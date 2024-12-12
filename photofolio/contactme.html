@@ -46,12 +46,15 @@
 <style>
   form {
     /* Center the form on the page */
-    margin: 100px auto;
+    margin-top: 0px;
+    margin-bottom: 150px;
+    margin: auto;
     width: 400px;
     /* Form outline */
     padding: 1em;
-    border: 1px solid #ccc;
+    border: 5px solid #ccc;
     border-radius: 1em;
+
   }
   ul {
     list-style: none;
@@ -73,7 +76,7 @@
     width: 300px;
     box-sizing: border-box;
     /* Match form field borders */
-    border: 1px solid #999
+    border: 2px solid #999
   }
   input:focus, textarea:focus {
     /* Additional highlight for focused elements */
@@ -106,33 +109,41 @@
   }
 </style>
 <script>
-const feedbackElement = document.getElementById('feedback');
-const formElement = document.forms[0];
-// add a 'listener' to wait for a submission of form.
-formElement.addEventListener('submit', function(e) {
-  // stop the form from doing the default action.
-  e.preventDefault();
-    // set the contents of feedback element to a message letting the user know the form was submitted successfully.
-    feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
-    // make the feedback element visible.
-    feedbackElement.style.display = "block";
-    // add a class to move everything down so message doesn't cover it.
-    document.body.classList.toggle('moveDown');
-});
-formElement.addEventListener('submit', function(e) {
-  e.preventDefault();
-    const userName = formElement.user_name.value.trim();
-    const email = formElement.email.value.trim();
-    if (!userName || !email) {
-      feedbackElement.innerHTML = 'Please fill out all required fields.';
+  const feedbackElement = document.getElementById('feedback');
+  const formElement = document.forms[0];
+
+  // Add a listener to wait for form submission
+  formElement.addEventListener('submit', function (e) {
+    e.preventDefault(); // Stop the form's default behavior
+
+    // Collect all input fields and check for empty values
+    const inputs = formElement.querySelectorAll('input, textarea'); // Adjust selectors based on your form
+    let emptyFields = [];
+    inputs.forEach((input) => {
+      if (input.type !== 'submit' && input.value.trim() === '') {
+        emptyFields.push(input.name); // Collect names of empty fields
+      }
+    });
+
+    // Show error if there are empty fields
+    if (emptyFields.length > 0) {
+      feedbackElement.innerHTML = `Please fill out the following fields: ${emptyFields.join(', ')}.`;
       feedbackElement.style.color = 'red';
-    }   
-    else {
-      feedbackElement.innerHTML = `Hello ${userName}! Thank you for your message.`;
+    } else {
+      // If all fields are filled, show a success message
+      const userName = formElement.user_name.value.trim();
+      feedbackElement.innerHTML = `Hello ${userName}! Thank you for your message. We will get back with you as soon as possible!`;
       feedbackElement.style.color = 'green';
     }
+
+    // Make the feedback element visible
+    feedbackElement.style.display = 'block';
+
+    // Add a class to move everything down so the message doesn't cover it
+    document.body.classList.toggle('moveDown');
   });
 </script>
+
     </main>
 
 
