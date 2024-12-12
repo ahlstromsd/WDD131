@@ -499,3 +499,32 @@ footer .social img {
   border-radius: 5px;
   margin-bottom: 10px;
 }
+/* Photo grid container */
+#photo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Photo thumbnails */
+#photo-grid img {
+  max-width: 30%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  width: 30%; /* Make images responsive */
+  height: 30%;
+  object-fit: cover; /* Ensure photos fit neatly */
+  border-radius: 8px; /* Optional: Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Shadow for a nice effect */
+  cursor: pointer; /* Indicate photos are interactive */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for photos */
+#photo-grid img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}

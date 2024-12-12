@@ -22,4 +22,4 @@ export const photos = [
     "sunshine",
     "tree"
   ];
-  
+export default photos
