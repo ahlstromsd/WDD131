@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Website | Sydney Ahlstrom Photography | Home: My Story </title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link type="text/css" rel="stylesheet" href="styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Architects+Daughter&display=swap" rel="stylesheet">
 </head>
 <body>
+    <link type="text/css" rel="stylesheet" href="styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Architects+Daughter&display=swap" rel="stylesheet">
     <div id="content">
     <header>
         <a id="logo_link" href="index.html">
@@ -19,6 +26,10 @@
             <a href="contactme.html">Contact Me</a>
         </nav>
     </header>
+    <section id="hero-msg">
+        <h1 class="home-title">My Story</h1>
+        <h4>Welcome to my page! Scroll down to learn why I decided to become a wildlife and nature photographer, and a little bit more about me.</h4>
+    </section>
     <div class="slideshow-container">
 
         <!-- Full-width images with number and caption text -->
@@ -76,17 +87,14 @@
       <script>
         let slideIndex = 1;
         showSlides(slideIndex);
-        
         // Next/previous controls
         function plusSlides(n) {
           showSlides(slideIndex += n);
         }
-        
         // Thumbnail image controls
         function currentSlide(n) {
           showSlides(slideIndex = n);
         }
-        
         function showSlides(n) {
           let i;
           let slides = document.getElementsByClassName("mySlides");

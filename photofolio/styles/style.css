@@ -1,15 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Skranji:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Architects+Daughter&display=swap');
+
 :root {
-  --primary-color: #6BAA75   ;
-  --secondary-color: #4A7B9D ;
-  --accent1-color: #26532B;
-  --accent2-color: #001427;
-  --heading-font: Caveat;
-  --paragraph-font: Skranji, sans-serif, Helvetica;
+  --primary-color: #03352d   ;
+  --secondary-color: #001427 ;
+  --accent1-color: #cbfbdce1;
+  --accent2-color: #c4cef6;
+
+  --heading-font: Annie Use Your Telescope, sans-serif;
+  --paragraph-font: Architects Daughter, Helvetica, sans-serif;
+
+  --headline-color-on-white: #14453D;  /* headlines on a white background */ 
+  --headline-color-on-color: #a2f5bf; /* headlines on a colored background */ 
+  --paragraph-color-on-white: #1B065E; /* paragraph text on a white background */ 
+  --paragraph-color-on-color: #b0bdf3; /* paragraph text on a colored background */ 
+  --paragraph-background-color: #D3D3D3;
+  --nav-link-color: #a2f5bf;
+  --nav-background-color: #020d3d;
+  --nav-hover-link-color: #b0bdf3;
+  --nav-hover-background-color: #14453D;
+}
+.architects-daughter-regular {
+  font-family: "Architects Daughter", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.annie-use-your-telescope-regular {
+  font-family: "Annie Use Your Telescope", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
-  background-color: #999;
+  background-color: #bcbcbc;
   font-size: 22px;
   margin: 0;
   padding: 0;
@@ -19,36 +41,54 @@ body {
   margin: 0 auto;
 }
 header {
-  background-color: var(--accent2-color);
+  background-color: var(--secondary-color);
   display: grid;
   grid-template-columns: 150px auto;
 }
 nav {
   display: flex;
   justify-content: space-around;
+  background-color: var(--secondary-color);
 }
 nav a {
   text-align: center;
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--accent1-color);
   padding: 35px;
 }
-nav a:hover {
+nav a:link, nav a:visited {
   color: var(--accent1-color);
-  background-color: var(--secondary-color);
+}
+nav a:hover {
+  color: var(--accent2-color);
+  background-color: var(--primary-color);
 }
 main {
     margin-top: 150px;
 }
+#hero-msg {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  margin-top: 50px;
+}
+#hero-msg h1 {
+  text-align: center;
+  color: var(--primary-color);
+} 
+#hero-msg h4 {
+  text-align: center;
+  color: var(--primary-color)
+}
   
 /* Slideshow container */
 .slideshow-container {
-    width: 90%; /* Full width */
-    height: 90%;
+    width: 80%; /* Full width */
+    height: 75%;
     position: relative;
     margin: auto;
-    box-shadow: 5px 5px 10px black;
+    box-shadow: 0px 0px 10px;
     overflow: hidden;
+    margin-top: 25px;
 }
   
 /* Hide the images by default */
@@ -98,10 +138,10 @@ main {
     font-size: 25px;
     padding: 8px 12px;
     position: absolute;
-    bottom: 8px;
+    bottom: 0px;
     width: 100%;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
 }
   
 /* Number text */
@@ -119,7 +159,7 @@ main {
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: #bbb;
+    background-color: #e7e4e4;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
@@ -167,12 +207,12 @@ main {
   padding: 15px 30px;
   margin-top: 50px;
   border-radius: 5px;
-  background-color: var(--secondary-color);
-  color: var(--accent1-color);
+  background-color: var(--accent2-color);
+  color: var(--primary-color);
 }
 .shop:hover {
-  background-color: var(--primary-color);
-  color: var(--accent2-color);
+  background-color: var(--accent1-color);
+  color: var(--secondary-color);
 }
 main section {
   text-align: center;
@@ -255,7 +295,7 @@ line-height: 1.5em;
 padding: 35px;
 grid-column: 6/10;
 grid-row: 6/7;
-background-color: var(--accent1-color);
+background-color: var(--primary-color);
 box-shadow: 5px 5px 10px black;
 }
 .msg h2 {
@@ -264,7 +304,7 @@ color: var(--accent2-color);
 .msg p {
 font-size: .8em;
 padding-bottom: 15px;
-color: var(--secondary-color);
+color: var(--accent2-color);
 }
 h4 {
 color: white;
@@ -275,15 +315,15 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--accent2-color);
-  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  color: var(--accent1-color);
 }
 footer a {
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--accent1-color);
 }
 footer a:hover {
-  color: var(--secondary-color);
+  color: var(--accent2-color);
 }
 footer p {
   font-size: 1.2em;
