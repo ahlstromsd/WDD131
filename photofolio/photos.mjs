@@ -1,0 +1,25 @@
+export const photos = [
+    "crab",
+    "eclipse",
+    "flower",
+    "glass",
+    "glass2",
+    "glass3",
+    "horse",
+    "limpy",
+    "limpy2",
+    "mountains",
+    "orca",
+    "orca2",
+    "orca3",
+    "orcas",
+    "orcas2",
+    "orcas3",
+    "orcas4",
+    "plant",
+    "sailboat",
+    "seattle",
+    "sunshine",
+    "tree"
+  ];
+  

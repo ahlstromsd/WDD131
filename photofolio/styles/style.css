@@ -433,3 +433,69 @@ footer .social img {
         margin-top: 25px;
     }
 }
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab {
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tab.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #0056b3;
+}
+
+.tab:hover:not(.active) {
+  background-color: #e0e0e0;
+}
+
+/* Tab Content */
+.tab-content {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+/* Photo Grid */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.photo-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.photo-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* The Shot Section */
+.shot-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.shot-details img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
