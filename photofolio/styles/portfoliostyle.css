@@ -227,6 +227,22 @@ footer .social img {
         margin-top: 25px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Tabs */
 .tabs {
   display: flex;
@@ -330,10 +346,9 @@ body {
     background-color: #f9f9f9;
   }
   
-  main {
+  #content {
     max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
+    margin: 0 auto;
   }
   
   h1 {
@@ -341,11 +356,11 @@ body {
     color: #333;
   }
   
-  /* Tab styles */
+  /* Tabs */
   .tabs {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin: 20px 0;
   }
   
   .tab-button {
@@ -356,7 +371,7 @@ body {
     cursor: pointer;
     margin: 0 5px;
     font-size: 16px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
   }
   
   .tab-button.active {
@@ -368,7 +383,7 @@ body {
     background-color: #bbb;
   }
   
-  /* Tab content styles */
+  /* Tab content */
   .tab-content {
     display: none;
   }
@@ -377,7 +392,7 @@ body {
     display: block;
   }
   
-  /* Photo grid styles */
+  /* Photo grid */
   .photo-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -395,7 +410,7 @@ body {
     transform: scale(1.05);
   }
   
-  /* Modal styles */
+  /* Modal */
   .modal {
     display: none;
     position: fixed;
@@ -424,5 +439,64 @@ body {
     cursor: pointer;
   }
   
-  /* Add "The Shot" tab-specific styles here */
+  /* Add your custom "The Shot" styles here */
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px;
+  }
   
+  .gallery-img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-img:hover {
+    transform: scale(1.05);
+  }
+  .theshot-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .limpy-card {
+    grid-column: 6/10;
+    grid-row: 1/3;
+    margin-top: 95px;
+    margin-right: 50px;
+  }
+  .limpy {
+    width: 100%;
+    margin-top: 95px;
+    margin-left: 50px;
+    grid-column: 1/5;
+    grid-row: 1/3;
+    box-shadow: 5px 5px 10px black;
+  }
+  .orca-card {
+    grid-column: 1/5;
+    grid-row: 3/5;
+    margin-top: 50px;
+    margin-left: 50px
+  }
+  .orca {
+    width: 100%;
+    margin-top: 50px;
+    margin-right: 50px;
+    grid-column: 6/10;
+    grid-row: 3/5;
+    box-shadow: 5px 5px 10px black;
+  }
+  .orca-card h2, .limpy-card h2 {
+    color: #26532B;
+    }
+  .orca-card p, .limpy-card p {
+    font-size: .8em;
+    padding-bottom: 15px;
+    color:#26532B
+    }

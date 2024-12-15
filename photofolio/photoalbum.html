@@ -22,28 +22,40 @@
     </header>
 
     <main>
-          <!-- Tab Buttons -->
-    <div class="tabs">
-      <button class="tab-button active" data-tab="photo-album">Photo Album</button>
-      <button class="tab-button" data-tab="the-shot">The Shot</button>
-    </div>
+      <h1>Portfolio</h1>
 
-    <!-- Tab Content -->
-    <div id="photo-album" class="tab-content active">
-      <div class="photo-grid" id="photo-grid"></div>
-
-      <!-- Modal for enlarged image -->
-      <div id="photo-modal" class="modal">
-        <span id="close-modal" class="close">&times;</span>
-        <img id="modal-img" class="modal-content" alt="Enlarged view">
+      <!-- Tabs -->
+      <div class="tabs">
+          <button class="tab-button active" data-tab="photo-album">Photo Album</button>
+          <button class="tab-button" data-tab="the-shot">The Shot</button>
       </div>
-    </div>
 
-    <div id="the-shot" class="tab-content">
-      <!-- Add your "The Shot" HTML here -->
-      <p>Placeholder for The Shot tab content</p>
-    </div>
-  </main>
+      <!-- Tab Content -->
+      <div id="photo-album" class="tab-content active">
+          <div class="photo-grid" id="photo-grid"></div>
+
+          <!-- Modal for enlarged images -->
+          <div id="photo-modal" class="modal">
+              <span id="close-modal" class="close">&times;</span>
+              <img id="modal-img" class="modal-content" alt="Enlarged photo">
+          </div>
+      </div>
+
+      <div id="the-shot" class="tab-content">
+        <div class="theshot-grid">
+          <section class="limpy-card">
+              <h2>Limpy the Coyote</h2>
+              <p>This is one of my most recent and most special shots. I have a huge love for Yellowstone National Park, so this summer I made an effort to go there as much as I could between work and school. On multiple visits I was able to photograph and spend some time around a peculiar coyote that me and some other regular photographers affectionately nicknamed "Limpy." The coyote had a bum back right leg, but she didn't let that stop her from showing off her impressive mouse hunting skills on multiple occassions. This particular photo is from my first ever encounter with Limpy, my roommate and I had been driving through the park looking for wildlife since 3am that morning and happened to stumble across Limpy just as we turned to head home. I was so excited that I got out of the car to sit on the roof. She came within twenty feet of our car, paying no attention to us whatsoever, and we got to take some really awesome pictures of her howling in the sagebrush. I'll always tresure this memory, and I hope to photograph her next summer as well.</p>
+          </section>
+          <img class="limpy" src="photos/limpy.jpg" alt="limpy">
+          <section class="orca-card">
+              <h2>The Residents</h2>
+              <p>Believe it or not, this photo is one of the oldest pictures I have, it was one of the first pictures I ever took with my camera. I got the opportunity to go on a whale watching tour in the Pacific Northwest, north of Seattle. We ended up seeing a pod of the resident orcas there and spending over four hours surrounded by them as they socialized, played, and breached multiple times. It was truly an amazing experience to be able to see these wonderful creatures up close in their natural environment. We also got to observe the differences between transient orcas, that mostly feed on seals and migrate from place to place, versus resident orcas, who stay in one place their whole lives with their families, feeding mainly on fish. This particular family group that we observed actually lost one of its calves the week after we'd seen them, and the mother ended up carrying its body around for nearly two weeks in mourning, showing how deeply feeling these animals are and how intelligent.</p>
+          </section>
+          <img class="orca" src="photos/orca2.jpg" alt="orca">
+        </div>
+      </div>
+    </main>
     
     <footer>
         <p>Sydney Ahlstrom Photography &copy; 2023 - Sydney Ahlstrom</p>
